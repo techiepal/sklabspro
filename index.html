@@ -783,7 +783,7 @@
                 <p class="hero-subtitle">Revolutionize your corporate training with our smart lab technology that replicates the full SaaS experience at a fraction of the cost.</p>
                 <div class="hero-buttons">
                     <button class="cta-button">Start Free Trial</button>
-                        <button class="cta-button outline" onclick="window.open('https://your-demo-link.com', '_blank')">
+                        <button class="cta-button outline" onclick="openDemo()">
                         Watch Demo
                         </button>
                 </div>
@@ -1055,7 +1055,15 @@
                     }
                 });
             });
-
+          
+            // Open plain window
+           function openDemo() {
+           window.open(
+          "https://your-demo-link.com", // your demo page
+          "DemoWindow",                 // window name
+          "width=1000,height=700,toolbar=no,menubar=no,location=no,status=no,scrollbars=yes,resizable=yes"
+         );
+         }
             // Header scroll effect
             const header = document.getElementById('header');
             window.addEventListener('scroll', function() {
